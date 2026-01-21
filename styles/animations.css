@@ -1,0 +1,416 @@
+/* ========================================
+   Playful Animations
+   Fun, bouncy, full of character
+   ======================================== */
+
+/* ========================================
+   Entrance Animations
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   Continuous Animations
+   ======================================== */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(255, 170, 94, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 170, 94, 0.3);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Bouncy hover for cards */
+@keyframes bounceHover {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(-6px, -6px);
+    }
+
+    50% {
+        transform: translate(-4px, -4px);
+    }
+
+    70% {
+        transform: translate(-5px, -5px);
+    }
+
+    100% {
+        transform: translate(-4px, -4px);
+    }
+}
+
+/* ========================================
+   Animation Classes
+   ======================================== */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-scale-in {
+    opacity: 0;
+    animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-slide-left {
+    opacity: 0;
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.animate-slide-right {
+    opacity: 0;
+    animation: slideInRight 0.6s ease forwards;
+}
+
+/* Animation Delays */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    animation-delay: 0.6s;
+}
+
+/* Continuous animations */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   Scroll Reveal (JS-triggered)
+   ======================================== */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-reveal="left"] {
+    transform: translateX(-40px);
+}
+
+[data-reveal="left"].revealed {
+    transform: translateX(0);
+}
+
+[data-reveal="right"] {
+    transform: translateX(40px);
+}
+
+[data-reveal="right"].revealed {
+    transform: translateX(0);
+}
+
+[data-reveal="scale"] {
+    transform: scale(0.9);
+}
+
+[data-reveal="scale"].revealed {
+    transform: scale(1);
+}
+
+/* Staggered children */
+[data-reveal-children]>* {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-reveal-children].revealed>*:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+[data-reveal-children].revealed>*:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+[data-reveal-children].revealed>*:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+[data-reveal-children].revealed>*:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+[data-reveal-children].revealed>*:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+[data-reveal-children].revealed>*:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+[data-reveal-children].revealed>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   Hover Interactions
+   ======================================== */
+/* Bouncy card lift */
+.hover-bounce {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease;
+}
+
+.hover-bounce:hover {
+    animation: bounceHover 0.4s ease forwards;
+}
+
+/* Glow on hover */
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4),
+        0 0 40px rgba(255, 170, 94, 0.2);
+}
+
+/* Tilt effect on hover */
+.hover-tilt {
+    transition: transform 0.3s ease;
+}
+
+.hover-tilt:hover {
+    transform: perspective(600px) rotateX(3deg) rotateY(-3deg) scale(1.02);
+}
+
+/* ========================================
+   Button Specific Animations
+   ======================================== */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-animated:hover::before {
+    left: 100%;
+}
+
+/* Pulsing CTA */
+.btn-pulse {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.btn-pulse:hover {
+    animation: none;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+/* ========================================
+   Special Effects
+   ======================================== */
+/* Glowing border effect */
+.glow-border {
+    position: relative;
+}
+
+.glow-border::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, var(--color-amber), var(--color-gold), var(--color-amber));
+    z-index: -1;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::after {
+    opacity: 0.5;
+}
+
+/* Text shimmer */
+.text-shimmer {
+    background: linear-gradient(90deg,
+            var(--color-text) 0%,
+            var(--color-gold) 50%,
+            var(--color-text) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-shimmer:hover {
+    animation: shimmer 2s linear infinite;
+}
+
+/* ========================================
+   Loading States
+   ======================================== */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--color-sandstone);
+    border-top-color: var(--color-amber);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

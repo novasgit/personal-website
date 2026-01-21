@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Waithaka | Faceted Horizons</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">NOVA</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Global Background -->
+    <div class="global-topo-bg"></div>
+
+    <!-- Seismic Cursor Canvas -->
+    <canvas id="seismic-canvas"></canvas>
+
+    <main>
+        <!-- SCENE 1: HERO -->
+        <section class="section hero-section" id="hero">
+            <div class="container grid-layout">
+                <div class="text-content">
+                    <span class="eyebrow">Data Scientist & Developer</span>
+                    <h1>Forging Data into <span class="highlight">Intelligence</span></h1>
+                    <p class="lead">Building high-performance analytical tools and AI-driven experiences with geological
+                        precision.</p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="visual-content center-flex">
+                    <div class="visual-content">
+                        <img src="assets/images/hero_crystal_v2.png" alt="Floating Data Crystal"
+                            class="isometric-prop hero-prop floating-anim">
+                    </div>
+                </div>
+        </section>
+
+        <!-- SCENE 2: ABOUT -->
+        <section class="section about-section" id="about">
+            <div class="container grid-layout reverse">
+                <div class="visual-content">
+                    <img src="assets/images/about_workbench.png" alt="Geologist Workbench"
+                        class="isometric-prop floating-anim-delayed">
+                </div>
+                <div class="text-content">
+                    <h2>The Approach</h2>
+                    <p class="lead">Precision engineering meets creative exploration.</p>
+                    <p>I view software development as a geological survey—digging deep into data to find the bedrock of
+                        truth, then building resilient structures on top of it.</p>
+                    <p>My work combines the rigour of data science with the intuitive polish of modern frontend
+                        engineering, ensuring that complex systems feel simple to use.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">AI</span>
+                            <span class="stat-label">Native</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 3: PROJECTS -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header center">
+                    <h2>The Engine Room</h2>
+                    <p>Recent deployments and experiments.</p>
+                </div>
+
+                <div class="projects-grid-3col">
+                    <!-- Project 1 -->
+                    <article class="project-card glass-panel">
+                        <div class="card-header">
+                            <h3>Rent-Easy</h3>
+                            <span class="tag">Full Stack</span>
+                        </div>
+                        <p>A comprehensive property management platform helping landlords track tenants and payments
+                            efficiently.</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                        <a href="#" class="link-arrow">View Case Study -></a>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card glass-panel">
+                        <div class="card-header">
+                            <h3>WeRateDogs</h3>
+                            <span class="tag">Data Science</span>
+                        </div>
+                        <p>Exploratory Data Analysis of the famous Twitter account, uncovering trends in dog ratings and
+                            engagement.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                        </div>
+                        <a href="#" class="link-arrow">View Analysis -></a>
+                    </article>
+
+                    <!-- Project: Netflix -->
+                    <article class="project-card glass-panel">
+                        <div class="card-header">
+                            <h3>Netflix EDA</h3>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        <p>Deep dive into content distribution patterns across global markets over a decade.</p>
+                        <div class="tech-tags">
+                            <span>Plotly</span>
+                            <span>Jupyter</span>
+                        </div>
+                        <a href="#" class="link-arrow">Explore Data -></a>
+                    </article>
+                </div>
+
+                <!-- Decorative Element between grids -->
+                <div class="visual-interstitial center-flex">
+                    <img src="assets/images/projects_engine.png" alt="Engine Block"
+                        class="isometric-prop floating-anim">
+                </div>
+            </div>
+        </section>
+
+        <!-- SCENE 4: CONTACT -->
+        <section class="section contact-section" id="contact">
+            <div class="container grid-layout narrow">
+                <div class="text-content center">
+                    <h2>Transmission Open</h2>
+                    <p>Ready to collaborate on your next data-driven initiative.</p>
+
+                    <form class="contact-form glass-panel">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Dr. Stone">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="mining@corp.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Requesting survey data..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Send Signal</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container center">
+            <p>&copy; 2024 Nova Waithaka. Crafted with Geological Precision.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/seismic-cursor.js"></script>
+</body>
+
+</html>
